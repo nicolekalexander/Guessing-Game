@@ -1,5 +1,4 @@
 #Guess the Number Game by Nicole Alexander
-
 #imports
 import random
 
@@ -11,9 +10,7 @@ win = False
 #conditional statements 
 while guesses > 0:
     guess = int(input("Guess: "))
-
     guesses -= 1
-
     if guess > number:
         print("You guessed too high. You have " + str(guesses) + " remaining.")
     elif guess < number:
@@ -22,7 +19,6 @@ while guesses > 0:
         print("Congrats, you won! You guessed correctly!")
         print("Would you like to play again?")
         win = True
-
         while True:
             play_again = raw_input("yes or no: ")
             if play_again.lower() not in ('yes', 'no'):
@@ -30,7 +26,6 @@ while guesses > 0:
             else:
                 break
  
-
 if win == False:
     print("Sorry, you didn't guess the correct number. The correct number was" + ", " + str(number) + ".")
     print("Would you like to play again?")
